@@ -46,7 +46,12 @@ struct ContentView: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
 //            offsets.map { items[$0] }.forEach(viewContext.delete)
-
+            print("khanh offset",offsets)
+            print("khanh",offsets.first)
+            guard let index = offsets.first else {return}
+            print("khanh index",index)
+            let fruitEntity = fruits[index]
+            viewContext.delete(fruitEntity)
             saveItem()
         }
     }
