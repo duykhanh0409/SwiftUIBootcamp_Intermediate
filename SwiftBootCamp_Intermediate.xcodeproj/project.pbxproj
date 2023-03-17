@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2A0B1AE29C4625800212D66 /* BackgroundThreadBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0B1AD29C4625800212D66 /* BackgroundThreadBootcamp.swift */; };
 		A2EA69F529C423070035E40E /* SwiftBootCamp_IntermediateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA69F429C423070035E40E /* SwiftBootCamp_IntermediateApp.swift */; };
 		A2EA69F729C423070035E40E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA69F629C423070035E40E /* ContentView.swift */; };
 		A2EA69F929C423090035E40E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2EA69F829C423090035E40E /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2A0B1AD29C4625800212D66 /* BackgroundThreadBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadBootcamp.swift; sourceTree = "<group>"; };
 		A2EA69F129C423070035E40E /* SwiftBootCamp_Intermediate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBootCamp_Intermediate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EA69F429C423070035E40E /* SwiftBootCamp_IntermediateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBootCamp_IntermediateApp.swift; sourceTree = "<group>"; };
 		A2EA69F629C423070035E40E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				A2EA69F429C423070035E40E /* SwiftBootCamp_IntermediateApp.swift */,
+				A2A0B1AD29C4625800212D66 /* BackgroundThreadBootcamp.swift */,
 				A2EA69F629C423070035E40E /* ContentView.swift */,
 				A2EA69F829C423090035E40E /* Assets.xcassets */,
 				A2EA69FD29C423090035E40E /* Persistence.swift */,
@@ -149,6 +152,7 @@
 				A2EA69F729C423070035E40E /* ContentView.swift in Sources */,
 				A2EA69F529C423070035E40E /* SwiftBootCamp_IntermediateApp.swift in Sources */,
 				A2EA6A0129C423090035E40E /* SwiftBootCamp_Intermediate.xcdatamodeld in Sources */,
+				A2A0B1AE29C4625800212D66 /* BackgroundThreadBootcamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
