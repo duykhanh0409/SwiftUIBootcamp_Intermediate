@@ -53,7 +53,7 @@ struct ContentView: View {
                     .onDelete(perform: deleteItems)
                 }
                 .listStyle(PlainListStyle())
-                .navigationTitle("Core Data Bootcamp")
+                .navigationTitle("Fruits")
                 .navigationBarItems(leading: EditButton(), trailing: Button(action: addItem, label: {
                     Label("Add Item", systemImage: "plus")
             }))
