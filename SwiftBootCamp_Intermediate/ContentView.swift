@@ -16,29 +16,56 @@ struct ContentView: View {
 //        animation: .default)
 //    private var items: FetchedResults<Item>
     
-    @FetchRequest(entity: FruitEntity.entity(), sortDescriptors: []) var fruits: FetchedResults<FruitEntity>
+    @FetchRequest(entity: FruitEntity.entity(), sortDescriptors:[NSSortDescriptor(keyPath: \FruitEntity.name, ascending: true)]) var fruits: FetchedResults<FruitEntity>
+    
+    @State var textFieldText:String = ""
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(fruits) { fruit in
-                    Text(fruit.name ?? "")
+            VStack(spacing:20) {
+                TextField("Add fruit here....", text:$textFieldText)
+                    .font(.headline)
+                    .padding(.leading)
+                    .padding(.vertical,10)
+                    .frame(maxWidth: .infinity)
+                    .background(.gray.opacity(0.4))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+                
+                Button {
+                    addItem()
+                } label: {
+                    Text("Submit")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 55)
+                        .background(.blue)
+                        .cornerRadius(10)
+                        .padding(.horizontal,20)
+                    
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .listStyle(PlainListStyle())
-            .navigationTitle("Core Data Bootcamp")
-            .navigationBarItems(leading: EditButton(), trailing: Button(action: addItem, label: {
-                Label("Add Item", systemImage: "plus")
+
+                List {
+                    ForEach(fruits) { fruit in
+                        Text(fruit.name ?? "")
+                    }
+                    .onDelete(perform: deleteItems)
+                }
+                .listStyle(PlainListStyle())
+                .navigationTitle("Core Data Bootcamp")
+                .navigationBarItems(leading: EditButton(), trailing: Button(action: addItem, label: {
+                    Label("Add Item", systemImage: "plus")
             }))
+            }
         }
     }
 
     private func addItem() {
         withAnimation {
             let newFruit = FruitEntity(context: viewContext)
-            newFruit.name = "Organe"
-
+            newFruit.name = textFieldText
+            textFieldText = ""
             saveItem()
         }
     }
